@@ -13,7 +13,6 @@ Select ONE Additional
 [ no ] Feature 5 - Use .append() method
 -->
 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -28,25 +27,34 @@ Select ONE Additional
     <h1>My Top 3 Memories of <span>This Year</span></h1>
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
+        <h3 id="mem1">Costa Rica</h3>
         <p>More about this memory.</p>
+        <img
+          src="https://cdn.britannica.com/14/7214-050-46827460/Costa-Rica-boundaries-map-cities-locator.jpg"
+        />
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="mem2">Starting NYU TISCH program</h3>
+        <p>learning how 2 use a camera well :P.</p>
+        <img
+          src="https://tisch.nyu.edu/content/dam/tisch/shared/IMG_6170.JPG.preset.vt-thumb.jpeg"
+        />
       </li>
 
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h3 id="mem3">2nd Pd webdev !!!!!!</h3>
+        <p>met all my fav sillies that will be leaving me next year</p>
+        <img
+          src="https://searchengineland.com/wp-content/seloads/2020/03/code-SS_634574354-1920x1080-1.jpg"
+        />
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("#suprise-Party").css("color", "purple");
       });
 
       $("#mem2-button").click(function () {
@@ -56,6 +64,36 @@ Select ONE Additional
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "green");
       });
+
+      // mem 1 button click
+      $("#mem1-button").click(function () {
+        $("#mem1").css("color", "purple"); // change h3 color
+        $("#img1").show(); // show image
+        $("p").eq(0).text("Went ziplining and hiking in Costa Rica!"); // change first paragraph text
+      });
+
+      // mem 2 button click
+      $("#mem2-button").click(function () {
+        $("#mem2").css("color", "blue");
+        $("#img2").show();
+        $("p")
+          .eq(1)
+          .html("<strong> learned a new medium and made friends </strong>"); // second paragraph text bold
+      });
+
+      // mem 3 button click
+      $("#mem3-button").click(function () {
+        $("#mem3").css("color", "green");
+        $("#img3").show();
+        $(".memory").eq(2).addClass("highlighted"); // add a class for extra style
+      });
+
+      $("<style>")
+        .prop("type", "text/css")
+        .html(
+          ".highlighted { background-color: #f0f8ff; padding: 10px; border: 2px solid lightgreen; }"
+        )
+        .appendTo("head");
     </script>
   </body>
 </html>

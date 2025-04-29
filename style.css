@@ -5,10 +5,28 @@ html {
   padding-left: 20px;
 }
 
-img{
+img {
   border-radius: 30px;
+  margin-top: 10px;
+  width: 150px;
 }
 
 h1 {
   font-family: "Poetsen One", sans-serif;
+  color: darkred;
+}
+
+p {
+  font-family: "Delius", cursive;
+  font-size: 16px;
+  color: gray;
+}
+
+button {
+  background-color: lightblue;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  font-family: "Akaya Kanadaka", cursive;
+  border-radius: 12px;
 }
